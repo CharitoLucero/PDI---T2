@@ -1,0 +1,8 @@
+gradio>=5.16,<6
+torch>=2.6,<3
+diffusers>=0.32,<1
+transformers>=4.49,<5
+accelerate>=1.2,<2
+safetensors>=0.5,<1
+pillow>=11,<13
+numpy>=1.26,<3

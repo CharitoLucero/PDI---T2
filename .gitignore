@@ -1,0 +1,6 @@
+.venv/
+.env
+.uv-cache/
+.model-cache/
+__pycache__/
+.ipynb_checkpoints/
