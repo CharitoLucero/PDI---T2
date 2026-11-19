@@ -221,8 +221,12 @@ modelos y presenta la interfaz Gradio dentro del cuaderno. Para usarla:
    evaluación. La sesión de Colab es temporal; al desconectarse se borran la
    caché y los archivos de `/content`.
 
-El cuaderno está preparado para Colab, pero esta copia todavía debe ejecutarse
-desde una sesión real de Colab para registrar evidencia. No subas fotos
+La copia se ejecutó en una sesión real de Colab. Colab informó PyTorch
+`2.14.1+cu130`, GPU Tesla T4 con 14.6 GB,
+cargó difusión y CLIP en CUDA y abrió la interfaz Gradio. La instalación
+también informó conflictos de dependencias con paquetes preinstalados de
+Colab; esos avisos no impidieron cargar los modelos ni abrir la interfaz. Falta
+procesar una foto para registrar salida, puntajes y tiempo. No subas fotos
 familiares privadas a un runtime remoto sin autorización.
 
 ## Probar en Hugging Face Spaces
@@ -420,8 +424,10 @@ escogidas.
   README.
 - [x] Preparar y documentar el cuaderno de Google Colab para usar una GPU sin
   modificar el cuaderno local.
-- [ ] Ejecutar el cuaderno en una sesión real de Colab y guardar evidencia de
-  hardware, tiempo y resultado.
+- [x] Ejecutar Colab, detectar una Tesla T4 y cargar difusión, CLIP e interfaz
+  Gradio.
+- [ ] Procesar una foto en Colab y guardar evidencia de imagen, puntajes CLIP y
+  tiempo de ejecución.
 - [ ] Probar una instalación limpia y la ejecución con `uv run app.py`.
 
 
