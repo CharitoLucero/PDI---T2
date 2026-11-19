@@ -202,6 +202,29 @@ local usa CPU y puede tardar horas; por eso la evaluación de tiempos se hará e
 el Space con GPU. El cuaderno de desarrollo está en
 [pipeline_colorizacion_fotos.ipynb](./pipeline_colorizacion_fotos.ipynb).
 
+## Ejecutar en Google Colab
+
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CharitoLucero/PDI---T2/blob/main/pipeline_colorizacion_fotos%20-%20colab.ipynb)
+
+La copia de Colab instala las dependencias sin reinstalar PyTorch, usa las
+rutas temporales de `/content`, comprueba que haya GPU CUDA antes de cargar los
+modelos y presenta la interfaz Gradio dentro del cuaderno. Para usarla:
+
+1. Abrí el cuaderno con el botón **Abrir en Colab**.
+2. Elegí **Entorno de ejecución → Cambiar tipo de entorno de ejecución → GPU**.
+3. Ejecutá todas las celdas en orden. La primera descarga las dependencias y las
+   siguientes descargan los modelos; la primera carga puede tardar.
+4. En la interfaz, procesá una imagen propia o con permiso. El reporte muestra
+   la GPU, el tiempo total de generación y CLIP, y los puntajes de las dos
+   etiquetas.
+5. Guardá una captura del resultado y registrá los parámetros para la
+   evaluación. La sesión de Colab es temporal; al desconectarse se borran la
+   caché y los archivos de `/content`.
+
+El cuaderno está preparado para Colab, pero esta copia todavía debe ejecutarse
+desde una sesión real de Colab para registrar evidencia. No subas fotos
+familiares privadas a un runtime remoto sin autorización.
+
 ## Probar en Hugging Face Spaces
 
 1. Creá un Space con SDK **Gradio** y elegí un hardware con GPU.
@@ -395,9 +418,11 @@ escogidas.
   tiempos observados
 - [x] Guardar las capturas recibidas en `assets/capturas/` y enlazarlas en este
   README.
+- [x] Preparar y documentar el cuaderno de Google Colab para usar una GPU sin
+  modificar el cuaderno local.
+- [ ] Ejecutar el cuaderno en una sesión real de Colab y guardar evidencia de
+  hardware, tiempo y resultado.
 - [ ] Probar una instalación limpia y la ejecución con `uv run app.py`.
-- [ ] Resolver/documentar la alternativa de ejecución local o Colab requerida
-  por la consigna.
 
 
 ## Material de referencia
